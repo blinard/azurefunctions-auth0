@@ -11,6 +11,7 @@
     <PackageIconUrl></PackageIconUrl>
     <PackageTags>auth0;AzureFunctions;azure-functions;Azure Functions;auth 0</PackageTags>
     <RepositoryUrl>https://github.com/blinard/azurefunctions-auth0</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/blinard/azurefunctions-auth0/blob/master/LICENSE</PackageLicenseUrl>
 
     <Description>Easily validate Auth0 tokens within an Azure Function.</Description>
   </PropertyGroup>
