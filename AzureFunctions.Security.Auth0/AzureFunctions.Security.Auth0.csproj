@@ -3,7 +3,17 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>AzureFunctions.Security.Auth0</PackageId>
+    <Title>AzureFunctions.Security.Auth0</Title>
+    <Authors>brlinard</Authors>
+    <Copyright>Copyright © Brad Linard 2019</Copyright>
+    <PackageIconUrl></PackageIconUrl>
+    <PackageTags>auth0;AzureFunctions;azure-functions;Azure Functions;auth 0</PackageTags>
+    <RepositoryUrl>https://github.com/blinard/azurefunctions-auth0</RepositoryUrl>
 
+    <Description>Easily validate Auth0 tokens within an Azure Function.</Description>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="5.4.0" />
@@ -11,5 +21,4 @@
     <PackageReference Include="Polly" Version="7.1.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
   </ItemGroup>
-
 </Project>
