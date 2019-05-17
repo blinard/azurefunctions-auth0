@@ -3,13 +3,21 @@
 Usage:
 
 ```
-static Auth0ApiSettings apiSettings = new Auth0ApiSettings()
-                                    {
-                                        Issuer = appSettings.AuthIssuer,
-                                        Audience = appSettings.AuthAudience
-                                    };
+using AzureFunctions.Security.Auth0;
 
-static IConfigurationManager<>
+static Auth0ApiSettings apiSettings = 
+    new Auth0ApiSettings()
+    {
+        Issuer = appSettings.AuthIssuer,
+        Audience = appSettings.AuthAudience
+    };
+
+static IConfigurationManager<OpenIdConnectConfiguration> configMgr = 
+    ConfigurationManagerFactory.GetConfigurationManager(apiSettings);
+
+IAuthenticationService authService = new AuthenticationService(apiSettings, configMgr);
+
+var claimsPrincipal = await authService.ValidateTokenAsync(request.GetAuthToken());
 ```
 
 Credit:
